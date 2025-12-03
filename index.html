@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#003d82">
+    <title>Конвертер валют - НБКР</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="23" fill="#fff"/>
+                        <text x="25" y="30" font-size="12" fill="#003d82" text-anchor="middle" font-weight="bold">НБКР</text>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <span>Национальный банк Кыргызской Республики</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="cash">Наличные</button>
+            <button class="tab" data-tab="noncash">Безналичные</button>
+            <button class="tab" data-tab="nbkr">НБКР</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Rates Section -->
+            <section class="rates-section">
+                <div class="rates-header">
+                    <div class="rates-title">
+                        <span>Курсы валют</span>
+                        <span class="rates-date" id="ratesDate">на 00:01 04.12.2025</span>
+                    </div>
+                    <div class="archive-section">
+                        <span class="archive-label">Архив курсов:</span>
+                        <div class="date-picker">
+                            <input type="date" id="archiveDate" value="2025-12-04">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rates Table -->
+                <div class="rates-table">
+                    <div class="table-header">
+                        <div class="th-currency">Валюта</div>
+                        <div class="th-buy">Покупка</div>
+                        <div class="th-sell">Продажа</div>
+                    </div>
+                    <div class="table-body" id="ratesTableBody">
+                        <div class="table-row">
+                            <div class="td-currency">
+                                <span class="currency-code">USD</span>
+                                <span class="currency-name">Доллар США</span>
+                            </div>
+                            <div class="td-buy">87.2</div>
+                            <div class="td-sell">87.7</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td-currency">
+                                <span class="currency-code">EUR</span>
+                                <span class="currency-name">Евро</span>
+                            </div>
+                            <div class="td-buy">101.3</div>
+                            <div class="td-sell">102.3</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td-currency">
+                                <span class="currency-code">KZT</span>
+                                <span class="currency-name">Казахстанский тенге</span>
+                            </div>
+                            <div class="td-buy">0.14</div>
+                            <div class="td-sell">0.175</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td-currency">
+                                <span class="currency-code">RUB</span>
+                                <span class="currency-name">Российский рубль</span>
+                            </div>
+                            <div class="td-buy">1.12</div>
+                            <div class="td-sell">1.15</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Converter Section -->
+            <section class="converter-section">
+                <h2 class="converter-title">Конвертер валют</h2>
+                
+                <div class="converter-card">
+                    <div class="converter-row">
+                        <div class="converter-input-group">
+                            <label class="converter-label">Заплачу</label>
+                            <div class="input-with-currency">
+                                <input type="text" class="converter-input" id="fromAmount" value="87,7" inputmode="decimal">
+                                <button class="currency-select" id="fromCurrencyBtn" data-code="KGS">
+                                    <span class="flag flag-kg"></span>
+                                    <span class="currency-text">KGS</span>
+                                    <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button class="swap-btn" id="swapBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                        </button>
+
+                        <div class="converter-input-group">
+                            <label class="converter-label">Получу</label>
+                            <div class="input-with-currency">
+                                <input type="text" class="converter-input" id="toAmount" value="1" readonly>
+                                <button class="currency-select" id="toCurrencyBtn" data-code="USD">
+                                    <span class="flag flag-us"></span>
+                                    <span class="currency-text">USD</span>
+                                    <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Cards -->
+                <div class="action-cards">
+                    <div class="action-card">
+                        <span>Условия и комиссии</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="action-card">
+                        <span>Индивидуальный обменный курс</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Currency Modal -->
+        <div class="modal" id="currencyModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Выберите валюту</h3>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                <div class="modal-body" id="currencyList">
+                    <!-- Currency options will be inserted by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Национальный банк Кыргызской Республики</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

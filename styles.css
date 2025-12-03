@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: #003d82;
+    padding: 15px 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo svg {
+    display: block;
+}
+
+.header-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 0;
+    padding: 0 30px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+    padding: 15px 25px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tab:hover {
+    color: #003d82;
+}
+
+.tab.active {
+    color: #003d82;
+    font-weight: 500;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #003d82;
+}
+
+/* Main Content */
+.main-content {
+    padding: 30px;
+}
+
+/* Rates Section */
+.rates-section {
+    margin-bottom: 40px;
+}
+
+.rates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rates-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.rates-date {
+    background: #003d82;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.archive-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.archive-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.date-picker {
+    position: relative;
+}
+
+.date-picker input {
+    padding: 8px 35px 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.date-picker input:focus {
+    outline: none;
+    border-color: #003d82;
+}
+
+/* Rates Table */
+.rates-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: #003d82;
+    color: white;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.th-buy, .th-sell {
+    text-align: right;
+}
+
+.table-body {
+    background: white;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 18px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background: #f8f9fa;
+}
+
+.td-currency {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.currency-code {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.currency-name {
+    font-size: 13px;
+    color: #888;
+}
+
+.td-buy, .td-sell {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    color: #003d82;
+}
+
+/* Converter Section */
+.converter-section {
+    margin-top: 40px;
+}
+
+.converter-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.converter-card {
+    background: #2d2d2d;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.converter-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.converter-input-group {
+    flex: 1;
+}
+
+.converter-label {
+    display: block;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.input-with-currency {
+    display: flex;
+    background: #3d3d3d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.converter-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    min-width: 0;
+}
+
+.converter-input:focus {
+    outline: none;
+}
+
+.converter-input::placeholder {
+    color: #666;
+}
+
+.currency-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 15px;
+    background: #4d4d4d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.currency-select:hover {
+    background: #5d5d5d;
+}
+
+.currency-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.chevron {
+    opacity: 0.7;
+}
+
+/* Flags */
+.flag {
+    width: 24px;
+    height: 18px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.flag-kg::after { content: '🇰🇬'; }
+.flag-us::after { content: '🇺🇸'; }
+.flag-eu::after { content: '🇪🇺'; }
+.flag-ru::after { content: '🇷🇺'; }
+.flag-kz::after { content: '🇰🇿'; }
+.flag-gb::after { content: '🇬🇧'; }
+.flag-cn::after { content: '🇨🇳'; }
+
+/* Swap Button */
+.swap-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #4d4d4d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.swap-btn:hover {
+    background: #5d5d5d;
+    transform: rotate(180deg);
+}
+
+/* Action Cards */
+.action-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-card:hover {
+    border-color: #003d82;
+    box-shadow: 0 2px 8px rgba(0, 61, 130, 0.1);
+}
+
+.action-card span {
+    font-size: 15px;
+    color: #333;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.modal-close:hover {
+    background: #e0e0e0;
+}
+
+.modal-body {
+    padding: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.currency-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.currency-option:hover {
+    background: #f5f5f5;
+}
+
+.currency-option.selected {
+    background: #e8f4fc;
+}
+
+.currency-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.currency-info .code {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.currency-info .name {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+    color: #888;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 12px 15px;
+    }
+    
+    .header-text {
+        font-size: 13px;
+    }
+    
+    .tabs {
+        padding: 0 15px;
+        overflow-x: auto;
+    }
+    
+    .tab {
+        padding: 12px 15px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    .main-content {
+        padding: 20px 15px;
+    }
+    
+    .rates-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .rates-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .table-header {
+        padding: 12px 15px;
+        font-size: 12px;
+    }
+    
+    .table-row {
+        padding: 15px;
+    }
+    
+    .currency-code {
+        font-size: 16px;
+    }
+    
+    .currency-name {
+        font-size: 11px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 16px;
+    }
+    
+    .converter-title {
+        font-size: 18px;
+    }
+    
+    .converter-card {
+        padding: 20px 15px;
+    }
+    
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .swap-btn {
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+    
+    .converter-input {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-card {
+        padding: 15px;
+    }
+    
+    .action-card span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .header-text {
+        font-size: 12px;
+    }
+    
+    .table-header {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    
+    .table-row {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+    
+    .td-currency {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .currency-code {
+        font-size: 15px;
+    }
+    
+    .currency-name {
+        font-size: 10px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 14px;
+    }
+}
