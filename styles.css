@@ -502,49 +502,211 @@ body {
     font-size: 13px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header {
-        padding: 12px 15px;
-    }
-    
-    .header-text {
-        font-size: 13px;
-    }
-    
-    .tabs {
-        padding: 0 15px;
-        overflow-x: auto;
-    }
-    
-    .tab {
-        padding: 12px 15px;
-        font-size: 14px;
-        white-space: nowrap;
+/* ========================================
+   RESPONSIVE DESIGN - All Devices
+   ======================================== */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
     }
     
     .main-content {
-        padding: 20px 15px;
+        padding: 40px 50px;
     }
     
-    .rates-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .header {
+        padding: 20px 50px;
     }
     
-    .rates-title {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+    .tabs {
+        padding: 0 50px;
     }
     
-    .table-header {
-        padding: 12px 15px;
-        font-size: 12px;
+    .converter-card {
+        padding: 35px 40px;
     }
     
     .table-row {
-        padding: 15px;
+        padding: 22px 30px;
+    }
+    
+    .table-header {
+        padding: 18px 30px;
+    }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .main-content {
+        padding: 35px 40px;
+    }
+}
+
+/* iPad Pro 12.9" Landscape & Large Tablets (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .header {
+        padding: 18px 35px;
+    }
+    
+    .tabs {
+        padding: 0 35px;
+    }
+    
+    .main-content {
+        padding: 30px 35px;
+    }
+    
+    .converter-card {
+        padding: 28px 30px;
+    }
+    
+    .converter-row {
+        gap: 20px;
+    }
+    
+    .action-cards {
+        gap: 20px;
+    }
+}
+
+/* iPad Pro 11" & iPad Air Landscape (834px - 1023px) */
+@media (min-width: 834px) and (max-width: 1023px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .header {
+        padding: 16px 30px;
+    }
+    
+    .header-text {
+        font-size: 17px;
+    }
+    
+    .header-subtitle {
+        font-size: 11px;
+    }
+    
+    .tabs {
+        padding: 0 30px;
+    }
+    
+    .tab {
+        padding: 14px 22px;
+        font-size: 14px;
+    }
+    
+    .main-content {
+        padding: 28px 30px;
+    }
+    
+    .rates-header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .table-header {
+        padding: 14px 18px;
+        font-size: 13px;
+    }
+    
+    .table-row {
+        padding: 16px 18px;
+    }
+    
+    .currency-code {
+        font-size: 17px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 17px;
+    }
+    
+    .converter-card {
+        padding: 25px;
+    }
+    
+    .converter-row {
+        gap: 18px;
+    }
+    
+    .converter-input {
+        font-size: 17px;
+        padding: 14px;
+    }
+    
+    .action-cards {
+        gap: 15px;
+    }
+    
+    .action-card {
+        padding: 16px 18px;
+    }
+}
+
+/* iPad Mini & Standard iPad Portrait (768px - 833px) */
+@media (min-width: 768px) and (max-width: 833px) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .header {
+        padding: 15px 25px;
+    }
+    
+    .header-text {
+        font-size: 16px;
+    }
+    
+    .header-subtitle {
+        font-size: 11px;
+    }
+    
+    .tabs {
+        padding: 0 25px;
+    }
+    
+    .tab {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+    
+    .main-content {
+        padding: 25px;
+    }
+    
+    .rates-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .rates-title {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .table-header {
+        padding: 13px 16px;
+        font-size: 13px;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .table-row {
+        padding: 15px 16px;
+        grid-template-columns: 2fr 1fr 1fr;
     }
     
     .currency-code {
@@ -552,7 +714,7 @@ body {
     }
     
     .currency-name {
-        font-size: 11px;
+        font-size: 12px;
     }
     
     .td-buy, .td-sell {
@@ -560,11 +722,147 @@ body {
     }
     
     .converter-title {
-        font-size: 18px;
+        font-size: 20px;
     }
     
     .converter-card {
-        padding: 20px 15px;
+        padding: 22px;
+    }
+    
+    .converter-row {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 15px;
+    }
+    
+    .swap-btn {
+        transform: none;
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(180deg);
+    }
+    
+    .converter-input {
+        font-size: 16px;
+        padding: 13px;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .action-card {
+        padding: 15px 16px;
+    }
+    
+    .action-card span {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 18px 25px;
+    }
+}
+
+/* Large Phones & Small Tablets (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .header {
+        padding: 14px 20px;
+    }
+    
+    .header-content {
+        gap: 12px;
+    }
+    
+    .logo svg,
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .header-text {
+        font-size: 15px;
+    }
+    
+    .header-subtitle {
+        font-size: 11px;
+    }
+    
+    .tabs {
+        padding: 0 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .tab {
+        padding: 12px 18px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    
+    .main-content {
+        padding: 22px 20px;
+    }
+    
+    .rates-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .rates-title {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .archive-section {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .table-header {
+        padding: 12px 15px;
+        font-size: 12px;
+        grid-template-columns: 1.8fr 1fr 1fr;
+    }
+    
+    .table-row {
+        padding: 14px 15px;
+        grid-template-columns: 1.8fr 1fr 1fr;
+    }
+    
+    .td-currency {
+        gap: 8px;
+    }
+    
+    .currency-code {
+        font-size: 15px;
+    }
+    
+    .currency-name {
+        font-size: 11px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 15px;
+    }
+    
+    .converter-title {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+    
+    .converter-card {
+        padding: 20px;
     }
     
     .converter-row {
@@ -584,44 +882,140 @@ body {
     
     .converter-input {
         font-size: 16px;
-        padding: 12px;
+        padding: 14px;
+    }
+    
+    .currency-select {
+        padding: 12px 14px;
     }
     
     .action-cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
     
     .action-card {
-        padding: 15px;
+        padding: 14px 15px;
     }
     
     .action-card span {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo svg {
-        width: 32px;
-        height: 32px;
+        font-size: 13px;
     }
     
-    .header-text {
+    .footer {
+        padding: 18px 20px;
+    }
+    
+    .footer p {
         font-size: 12px;
     }
     
+    /* Modal adjustments */
+    .modal-content {
+        width: 85%;
+        max-width: 380px;
+    }
+}
+
+/* Standard Mobile Phones (480px - 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
+    .header {
+        padding: 12px 16px;
+    }
+    
+    .header-content {
+        gap: 10px;
+    }
+    
+    .logo svg,
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .header-text {
+        font-size: 14px;
+    }
+    
+    .header-subtitle {
+        font-size: 10px;
+    }
+    
+    .tabs {
+        padding: 0 16px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .tab {
+        padding: 11px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+    
+    .main-content {
+        padding: 18px 16px;
+    }
+    
+    .rates-section {
+        margin-bottom: 30px;
+    }
+    
+    .rates-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .rates-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 15px;
+    }
+    
+    .rates-date {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+    
+    .archive-section {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .archive-label {
+        font-size: 13px;
+    }
+    
+    .date-picker input {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+    
+    .rates-table {
+        border-radius: 6px;
+    }
+    
     .table-header {
-        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 11px 14px;
+        font-size: 11px;
+        grid-template-columns: 1.6fr 1fr 1fr;
     }
     
     .table-row {
-        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 13px 14px;
+        grid-template-columns: 1.6fr 1fr 1fr;
     }
     
     .td-currency {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
+        gap: 6px;
     }
     
     .currency-code {
@@ -633,6 +1027,719 @@ body {
     }
     
     .td-buy, .td-sell {
+        font-size: 15px;
+    }
+    
+    .converter-section {
+        margin-top: 30px;
+    }
+    
+    .converter-title {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    
+    .converter-card {
+        padding: 18px 15px;
+        border-radius: 10px;
+    }
+    
+    .converter-label {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .swap-btn {
+        width: 42px;
+        height: 42px;
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+    
+    .input-with-currency {
+        border-radius: 6px;
+    }
+    
+    .converter-input {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .currency-select {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+    
+    .currency-text {
+        font-size: 13px;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 18px;
+    }
+    
+    .action-card {
+        padding: 14px 15px;
+        border-radius: 8px;
+    }
+    
+    .action-card span {
+        font-size: 13px;
+    }
+    
+    .footer {
+        padding: 16px;
+    }
+    
+    .footer p {
+        font-size: 11px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 92%;
+        max-width: 360px;
+        border-radius: 10px;
+    }
+    
+    .modal-header {
+        padding: 16px;
+    }
+    
+    .modal-header h3 {
+        font-size: 16px;
+    }
+    
+    .modal-body {
+        padding: 8px;
+        max-height: 55vh;
+    }
+    
+    .currency-option {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .currency-info .code {
+        font-size: 15px;
+    }
+    
+    .currency-info .name {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Phones (320px - 479px) */
+@media (max-width: 479px) {
+    .container {
+        min-height: 100vh;
+    }
+    
+    .header {
+        padding: 10px 12px;
+    }
+    
+    .header-content {
+        gap: 8px;
+    }
+    
+    .logo svg,
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .header-text {
+        font-size: 13px;
+        gap: 1px;
+    }
+    
+    .header-subtitle {
+        font-size: 9px;
+    }
+    
+    .tabs {
+        padding: 0 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 0;
+    }
+    
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .tab {
+        padding: 10px 12px;
+        font-size: 12px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .tab.active::after {
+        height: 2px;
+    }
+    
+    .main-content {
+        padding: 15px 12px;
+    }
+    
+    .rates-section {
+        margin-bottom: 25px;
+    }
+    
+    .rates-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .rates-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
         font-size: 14px;
+    }
+    
+    .rates-date {
+        padding: 4px 10px;
+        font-size: 11px;
+        border-radius: 15px;
+    }
+    
+    .archive-section {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .archive-label {
+        font-size: 12px;
+    }
+    
+    .date-picker {
+        width: 100%;
+    }
+    
+    .date-picker input {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .rates-table {
+        border-radius: 6px;
+    }
+    
+    .table-header {
+        padding: 10px 12px;
+        font-size: 10px;
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+    
+    .table-row {
+        padding: 12px;
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+    
+    .td-currency {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .currency-code {
+        font-size: 14px;
+    }
+    
+    .currency-name {
+        font-size: 9px;
+        line-height: 1.2;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 14px;
+    }
+    
+    .converter-section {
+        margin-top: 25px;
+    }
+    
+    .converter-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .converter-card {
+        padding: 15px 12px;
+        border-radius: 8px;
+    }
+    
+    .converter-label {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .swap-btn {
+        width: 40px;
+        height: 40px;
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+    
+    .swap-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .input-with-currency {
+        border-radius: 6px;
+    }
+    
+    .converter-input {
+        font-size: 16px;
+        padding: 11px 10px;
+    }
+    
+    .currency-select {
+        padding: 10px;
+        gap: 5px;
+    }
+    
+    .currency-text {
+        font-size: 12px;
+    }
+    
+    .flag {
+        width: 20px;
+        height: 15px;
+        font-size: 16px;
+    }
+    
+    .chevron {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 15px;
+    }
+    
+    .action-card {
+        padding: 12px;
+        border-radius: 6px;
+    }
+    
+    .action-card span {
+        font-size: 12px;
+    }
+    
+    .action-card svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .footer {
+        padding: 14px 12px;
+    }
+    
+    .footer p {
+        font-size: 10px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        max-width: 320px;
+        border-radius: 8px;
+        max-height: 85vh;
+    }
+    
+    .modal-header {
+        padding: 14px 12px;
+    }
+    
+    .modal-header h3 {
+        font-size: 15px;
+    }
+    
+    .modal-close {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+    }
+    
+    .modal-body {
+        padding: 6px;
+        max-height: 50vh;
+    }
+    
+    .currency-option {
+        padding: 10px;
+        gap: 10px;
+        border-radius: 6px;
+    }
+    
+    .currency-option .flag {
+        width: 22px;
+        height: 16px;
+        font-size: 18px;
+    }
+    
+    .currency-info .code {
+        font-size: 14px;
+    }
+    
+    .currency-info .name {
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Devices (below 320px) */
+@media (max-width: 319px) {
+    .header {
+        padding: 8px 10px;
+    }
+    
+    .logo svg,
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .header-text {
+        font-size: 11px;
+    }
+    
+    .header-subtitle {
+        font-size: 8px;
+    }
+    
+    .tab {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+    
+    .main-content {
+        padding: 12px 10px;
+    }
+    
+    .table-header {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+    
+    .table-row {
+        padding: 10px;
+    }
+    
+    .currency-code {
+        font-size: 13px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 13px;
+    }
+    
+    .converter-card {
+        padding: 12px 10px;
+    }
+    
+    .converter-input {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATIONS
+   ======================================== */
+
+/* Landscape for phones */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 8px 20px;
+    }
+    
+    .logo svg,
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .header-text {
+        font-size: 14px;
+    }
+    
+    .tabs {
+        padding: 0 20px;
+    }
+    
+    .tab {
+        padding: 8px 15px;
+    }
+    
+    .main-content {
+        padding: 15px 20px;
+    }
+    
+    .rates-section {
+        margin-bottom: 20px;
+    }
+    
+    .rates-header {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .table-row {
+        padding: 10px 15px;
+    }
+    
+    .converter-section {
+        margin-top: 20px;
+    }
+    
+    .converter-card {
+        padding: 15px;
+    }
+    
+    .converter-row {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 15px;
+    }
+    
+    .swap-btn {
+        transform: none;
+    }
+    
+    .action-cards {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 15px;
+    }
+    
+    .modal-content {
+        max-height: 90vh;
+    }
+    
+    .modal-body {
+        max-height: 60vh;
+    }
+}
+
+/* iPad Landscape specific */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .container {
+        max-width: 100%;
+    }
+    
+    .main-content {
+        padding: 30px 40px;
+    }
+    
+    .converter-row {
+        gap: 25px;
+    }
+    
+    .converter-input-group {
+        max-width: 400px;
+    }
+}
+
+/* ========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .tab {
+        min-height: 44px;
+    }
+    
+    .table-row {
+        min-height: 60px;
+    }
+    
+    .currency-select {
+        min-height: 44px;
+    }
+    
+    .swap-btn {
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    .action-card {
+        min-height: 50px;
+    }
+    
+    .currency-option {
+        min-height: 52px;
+    }
+    
+    .modal-close {
+        min-width: 36px;
+        min-height: 36px;
+    }
+    
+    /* Remove hover effects on touch */
+    .tab:hover {
+        color: #666;
+    }
+    
+    .tab.active:hover {
+        color: #003d82;
+    }
+    
+    .table-row:hover {
+        background: white;
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(90deg);
+    }
+    
+    .action-card:hover {
+        border-color: #e0e0e0;
+        box-shadow: none;
+    }
+    
+    /* Active states for touch */
+    .tab:active {
+        color: #003d82;
+        background: rgba(0, 61, 130, 0.05);
+    }
+    
+    .table-row:active {
+        background: #f5f5f5;
+    }
+    
+    .currency-select:active {
+        background: #5d5d5d;
+    }
+    
+    .swap-btn:active {
+        background: #5d5d5d;
+    }
+    
+    .action-card:active {
+        border-color: #003d82;
+        background: #f8f9fa;
+    }
+    
+    .currency-option:active {
+        background: #e8f4fc;
+    }
+}
+
+/* ========================================
+   HIGH DPI / RETINA DISPLAYS
+   ======================================== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .rates-table {
+        border-width: 0.5px;
+    }
+    
+    .table-row {
+        border-bottom-width: 0.5px;
+    }
+    
+    .tabs {
+        border-bottom-width: 0.5px;
+    }
+    
+    .action-card {
+        border-width: 0.5px;
+    }
+}
+
+/* ========================================
+   SAFE AREA INSETS (iPhone X+)
+   ======================================== */
+
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+    
+    .tabs {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+    
+    .main-content {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+    
+    .footer {
+        padding-bottom: max(14px, env(safe-area-inset-bottom));
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+    
+    .tabs,
+    .converter-section,
+    .archive-section,
+    .action-cards,
+    .modal {
+        display: none !important;
+    }
+    
+    .header {
+        background: #003d82 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .rates-table {
+        page-break-inside: avoid;
+    }
+    
+    .table-header {
+        background: #003d82 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
