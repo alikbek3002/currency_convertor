@@ -503,6 +503,78 @@ body {
 }
 
 /* Responsive */
+/* iPad and tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .main-content {
+        padding: 25px 20px;
+    }
+    
+    .table-header {
+        grid-template-columns: 2fr 1.2fr 1.2fr;
+        padding: 14px 18px;
+    }
+    
+    .table-row {
+        grid-template-columns: 2fr 1.2fr 1.2fr;
+        padding: 16px 18px;
+    }
+    
+    .td-currency {
+        gap: 8px;
+    }
+    
+    .currency-code {
+        font-size: 17px;
+    }
+    
+    .currency-name {
+        font-size: 12px;
+    }
+    
+    .td-buy, .td-sell {
+        font-size: 17px;
+        padding-right: 5px;
+    }
+    
+    .converter-card {
+        padding: 20px 15px;
+    }
+    
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .swap-btn {
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+    
+    .converter-input {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .currency-select {
+        padding: 12px 12px;
+        white-space: nowrap;
+    }
+    
+    .action-cards {
+        gap: 12px;
+        grid-template-columns: 1fr;
+    }
+    
+    .action-card {
+        padding: 16px;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 12px 15px;
