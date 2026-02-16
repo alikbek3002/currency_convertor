@@ -1,54 +1,16 @@
-# Конвертер валют - НБКР стиль
+# React + Vite
 
-Современный конвертер валют с дизайном в стиле Национального банка Кыргызской Республики.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Возможности
+Currently, two official plugins are available:
 
-- ✅ Конвертация между 9 популярными валютами
-- ✅ Актуальные курсы в реальном времени
-- ✅ Отображение популярных валютных пар
-- ✅ Адаптивный дизайн для мобильных устройств
-- ✅ Профессиональный стиль НБКР (синий/белый)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## API
+## React Compiler
 
-Проект использует **бесплатный API от exchangerate-api.com**:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Вариант 1: С API ключом (рекомендуется)
-1. Зарегистрируйтесь на https://www.exchangerate-api.com/
-2. Получите бесплатный API ключ (1500 запросов/месяц)
-3. Откройте `script.js`
-4. Замените `YOUR_API_KEY` на ваш ключ:
-   ```javascript
-   const API_KEY = 'ваш_ключ_здесь';
-   ```
+## Expanding the ESLint configuration
 
-### Вариант 2: Без ключа (ограниченный)
-Приложение автоматически переключится на резервный API без ключа, если основной не работает.
-
-## Запуск
-
-Просто откройте `index.html` в браузере. Никаких дополнительных установок не требуется!
-
-## Поддерживаемые валюты
-
-- USD - Доллар США
-- EUR - Евро
-- RUB - Российский рубль
-- KZT - Казахский тенге
-- KGS - Киргизский сом
-- GBP - Фунт стерлингов
-- JPY - Японская йена
-- CNY - Китайский юань
-- TRY - Турецкая лира
-
-## Технологии
-
-- HTML5
-- CSS3 (с градиентами и анимациями)
-- Vanilla JavaScript (без фреймворков)
-- Exchange Rate API
-
----
-
-© 2025 Стиль НБКР
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
